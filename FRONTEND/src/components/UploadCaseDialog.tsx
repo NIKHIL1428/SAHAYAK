@@ -114,7 +114,7 @@ export default function UploadCaseDialog({ open, onClose, onSuccess }: UploadCas
               accept=".wav,.mp3,.m4a,.ogg,.flac,.webm,.mp4,.mpeg,.mpga"
             />
             <CloudUploadIcon sx={{ fontSize: 48, color: "text.secondary", mb: 1 }} />
-            <Typography variant="subtitle1" fontWeight={600}>
+            <Typography variant="subtitle1" sx={{ fontWeight: 600 }}>
               {file ? file.name : "Click to select audio file"}
             </Typography>
             {file && (

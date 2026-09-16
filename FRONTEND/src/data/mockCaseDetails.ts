@@ -1,4 +1,8 @@
-import type { CaseDetail, ExtractedEntities } from "../types/case";
+import type {
+  CaseDetail,
+  ExtractedEntities,
+  InvestigationDetails,
+} from "../types/case";
 import { recentCases } from "./mockCases";
 
 const defaultEntities: ExtractedEntities = {
@@ -11,7 +15,31 @@ const defaultEntities: ExtractedEntities = {
   ifscCodes: ["SBIN0001234", "HDFC0000456"],
   emails: ["support-fake@sbi-verify.in", "kyc-update@traispoof.com"],
   urls: ["https://sbi-kyc-verify.net/login", "https://bit.ly/3xFraudLink"],
+  amounts: ["₹45,000", "₹12,500"],
 };
+
+const defaultInvestigationDetails: InvestigationDetails = {
+  fraudType: "UPI Fraud — spoofed bank customer care",
+  victimAction:
+    "Shared OTP aloud after caller claimed suspicious account activity and threatened RBI-mandated account freeze",
+  suspectAction:
+    "Impersonated SBI customer care, created urgency, and initiated UPI debit to mule account fraudster@paytm",
+  moneyLost: "₹45,000",
+  bankName: "State Bank of India",
+  finalOutcome:
+    "Account freeze recommended; NPCI reversal request initiated; FIR under IT Act Section 66D and IPC Section 420",
+};
+
+const defaultTranscript = `[00:00] Analyst: Delhi Cyber Cell, case recording DL-CY-2026-08421. Please state your name for the record.
+[00:08] Complainant: Rajesh Kumar.
+[00:12] Analyst: You reported a UPI fraud today. Can you walk us through the call?
+[00:20] Complainant: Someone called from a number that looked like SBI. They said my account had suspicious activity and I must verify immediately.
+[00:35] Analyst: Did they ask for an OTP?
+[00:38] Complainant: Yes. They said it was for UPI verification only and my account would be frozen by RBI if I refused.
+[00:52] Complainant: I read the OTP. Within ten minutes ₹45,000 was debited to fraudster@paytm.
+[01:05] Analyst: Did you share any other details — PAN, Aadhaar, or bank account number?
+[01:12] Complainant: Only the OTP. They already knew my name.
+[01:18] Analyst: We will note the caller ID, UPI ID, and transaction references for investigation.`;
 
 const defaultDetail: Omit<CaseDetail, keyof import("../types/case").CyberCase> = {
   voiceRecording: {
@@ -29,6 +57,8 @@ const defaultDetail: Omit<CaseDetail, keyof import("../types/case").CyberCase> =
     confidence: "94%",
   },
   extractedEntities: defaultEntities,
+  investigationDetails: defaultInvestigationDetails,
+  transcript: defaultTranscript,
 };
 
 export const caseDetails: Record<string, CaseDetail> = {
@@ -74,7 +104,25 @@ export const caseDetails: Record<string, CaseDetail> = {
       ifscCodes: [],
       emails: ["kyc-update@traispoof.com"],
       urls: ["https://trai-kyc-update.in/verify"],
+      amounts: [],
     },
+    investigationDetails: {
+      fraudType: "OTP Fraud — TRAI KYC impersonation",
+      victimAction:
+        "Received automated message and live call threatening SIM deactivation; disconnected before sharing OTP",
+      suspectAction:
+        "Claimed TRAI affiliation and demanded OTP for KYC compliance within 24 hours",
+      moneyLost: "None — prevented",
+      bankName: "Not applicable",
+      finalOutcome:
+        "Preventive intervention; block caller at telecom level; counsel victim on OTP safety",
+    },
+    transcript: `[00:00] Analyst: Recording for case DL-CY-2026-08420, complainant Priya Sharma.
+[00:06] Complainant: I got a message saying my SIM would be deactivated, then a person called claiming to be from TRAI.
+[00:18] Analyst: What did they ask you to do?
+[00:22] Complainant: Share an OTP for KYC. They said I had less than 24 hours or the SIM would stop working.
+[00:35] Complainant: It felt wrong. I hung up and did not share anything.
+[00:42] Analyst: Good decision. We will flag caller ID +91 87654 32109 — it appears in prior fraud complaints.`,
   },
 };
 
@@ -109,6 +157,16 @@ export function getCaseDetail(caseId: string): CaseDetail | undefined {
       ifscCodes: [],
       emails: [],
       urls: [],
+      amounts: [],
     },
+    investigationDetails: {
+      fraudType: baseCase.fraudType,
+      victimAction: "Reported incident; details pending full call analysis",
+      suspectAction: `Contacted complainant from caller ID ${baseCase.callerId}`,
+      moneyLost: "Under verification",
+      bankName: "Under verification",
+      finalOutcome: `Case registered in ${baseCase.district}; status ${baseCase.status}`,
+    },
+    transcript: `Transcript pending for case ${caseId}. Audio processing and entity extraction will populate this section once analysis completes.`,
   };
 }
