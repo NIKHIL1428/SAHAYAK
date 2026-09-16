@@ -1,0 +1,83 @@
+import type { CyberCase, DashboardStats } from "../types/case";
+
+export const dashboardStats: DashboardStats = {
+  totalCases: 12847,
+  todaysCases: 34,
+  upiFraud: 4126,
+  otpFraud: 2891,
+};
+
+export const recentCases: CyberCase[] = [
+  {
+    id: "DL-CY-2026-08421",
+    callerId: "+91 98765 43210",
+    complainant: "Rajesh Kumar",
+    fraudType: "UPI Fraud",
+    status: "Under Investigation",
+    registeredAt: "2026-07-11T08:42:00",
+    district: "South Delhi",
+  },
+  {
+    id: "DL-CY-2026-08420",
+    callerId: "+91 87654 32109",
+    complainant: "Priya Sharma",
+    fraudType: "OTP Fraud",
+    status: "Open",
+    registeredAt: "2026-07-11T07:15:00",
+    district: "North Delhi",
+  },
+  {
+    id: "DL-CY-2026-08419",
+    callerId: "+91 76543 21098",
+    complainant: "Amit Singh",
+    fraudType: "UPI Fraud",
+    status: "Escalated",
+    registeredAt: "2026-07-10T22:30:00",
+    district: "East Delhi",
+  },
+  {
+    id: "DL-CY-2026-08418",
+    callerId: "+91 65432 10987",
+    complainant: "Neha Gupta",
+    fraudType: "OTP Fraud",
+    status: "Closed",
+    registeredAt: "2026-07-10T18:05:00",
+    district: "West Delhi",
+  },
+  {
+    id: "DL-CY-2026-08417",
+    callerId: "+91 91234 56789",
+    complainant: "Vikram Mehta",
+    fraudType: "Phishing",
+    status: "Under Investigation",
+    registeredAt: "2026-07-10T14:22:00",
+    district: "Central Delhi",
+  },
+  {
+    id: "DL-CY-2026-08416",
+    callerId: "+91 99887 76655",
+    complainant: "Sunita Devi",
+    fraudType: "UPI Fraud",
+    status: "Open",
+    registeredAt: "2026-07-10T11:48:00",
+    district: "New Delhi",
+  },
+  {
+    id: "DL-CY-2026-08415",
+    callerId: "+91 88776 65544",
+    complainant: "Mohammed Irfan",
+    fraudType: "OTP Fraud",
+    status: "Under Investigation",
+    registeredAt: "2026-07-09T16:33:00",
+    district: "South East Delhi",
+  },
+  {
+    id: "DL-CY-2026-08414",
+    callerId: "+91 77665 54433",
+    complainant: "Anjali Verma",
+    fraudType: "UPI Fraud",
+    status: "Closed",
+    registeredAt: "2026-07-09T09:17:00",
+    district: "North East Delhi",
+  },
+];

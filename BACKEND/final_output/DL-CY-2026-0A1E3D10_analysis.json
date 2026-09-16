@@ -1,0 +1,32 @@
+{
+    "case_id": "DL-CY-2026-0A1E3D10",
+    "audio_file": "DL-CY-2026-0A1E3D10_audio8.wav",
+    "audio_path": "C:\\Users\\sonis\\Desktop\\Cybercrime_Pipeline\\pipeline\\uploads\\DL-CY-2026-0A1E3D10_audio8.wav",
+    "processed_at": "2026-07-24T10:36:28.950489+00:00",
+    "transcript": "Hello. Hello. Hello, welcome to Delhi Police. How may I help you? Sir, just a while ago, I received a UPI pop-up. Okay. When I clicked on it, I received a message from my bank account that I have deducted Rs. 12,400. Hmm. Yes, I haven't done any transaction yet. I have received the message on my own. Now tell me the details one by one. What was your amount? My money was Rs. 12,400. What is the name of the bank? Punjab National Bank. Can you tell me the account number? Account number is 482716590123 PAN number is ABCPD1234F Ok, tell me your Aadhaar number Sir, my Aadhaar number is 9840-7648-9213 Ok, and do you have any Email ID which is associated with your account? Sir, my email id is nikhilsharma at the rate gmail.com Ok, your UPI id? Sir, my UPI id is rahul.sharma at the rate opsbi Ok, are you basically good? Sir, IFSC code SBIN034 Okay I have filed your complaint You can take further updates from the nearest police station Okay sir Okay Thank you for calling",
+    "phone_numbers": [],
+    "upi_ids": [],
+    "pan_numbers": [
+        "ABCPD1234F"
+    ],
+    "aadhaar_numbers": [
+        "984076489213"
+    ],
+    "emails": [],
+    "urls": [],
+    "amounts": [
+        "Rs. 12,400"
+    ],
+    "ifsc_codes": [],
+    "bank_account_numbers": [
+        "482716590123"
+    ],
+    "transaction_ids": [],
+    "summary": "The victim received a UPI pop-up, clicked on it, and later found Rs. 12,400 deducted from their Punjab National Bank account without authorization. They provided personal details including PAN, Aadhaar, email, and UPI ID during the police complaint.",
+    "fraud_type": "UPI phishing/fraudulent transaction",
+    "victim_action": "Clicked on a UPI pop-up",
+    "suspect_action": "Sent a fraudulent UPI pop-up leading to unauthorized transaction",
+    "money_lost": "12400",
+    "bank_name": "Punjab National Bank",
+    "final_outcome": "Complaint filed with Delhi Police"
+}

@@ -1,0 +1,7 @@
+ollama 
+openai-whisper
+torch
+fastapi
+pydantic
+uvicorn[standard]
+python-multipart

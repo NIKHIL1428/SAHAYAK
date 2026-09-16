@@ -1,0 +1,26 @@
+{
+    "case_id": "DL-CY-2026-747B186C",
+    "audio_file": "DL-CY-2026-747B186C_audio5.wav",
+    "audio_path": "C:\\Users\\sonis\\Desktop\\Cybercrime_Pipeline\\pipeline\\uploads\\DL-CY-2026-747B186C_audio5.wav",
+    "processed_at": "2026-07-19T13:02:14.136478+00:00",
+    "transcript": "Namaskar Dilli Saheb Karai Namaskar Sir Sir, I have got a transaction from my card What? I have got a transaction from my credit card What is the amount? Rs. 2676 When did it happen? Just a while ago Where is your credit card? I have it Okay, hold it Channel number 272830, please report to your channel. Are you still here? Tell me your name first. Where do you live, please? Where are you from? From the metro station. My name is Hajaz Shahайте. Hello sir, do you live in Delhi? Yes sir Sir, do you live in Delhi? Yes sir, I live in Delhi What is your phone number? 838368824218 Your name? Sandeep Kumar Your father's name? Raj Singh Your date of birth? 22021977 Your address please sir Yes sir Your address please sir House number 155 Yes Barwala Barwala Delhi What is the pin code here? 110039 What is the name of the police station here? Sabah Dairy they do like this they have to make a complaint or they have to go to UP and ask them what is your name address, ask for the address card it will be patched up it will be done which bank's credit card do you have this one sir you are saying your card number this sir yes sir 5-4 1-4 5-7 0-0 5-0 6-7 2-4 9-5 9-5 Did you cut it now? Yes sir Did you cut it in one go? Yes sir Do you know anything about the time? Sir, let me check the time. darüber nobody Your complaint has been filed, sir, is it okay? It's okay, sir. There will be an SMS on your phone. Show it to the bank. Okay, sir. Okay.",
+    "phone_numbers": [],
+    "upi_ids": [],
+    "pan_numbers": [],
+    "aadhaar_numbers": [],
+    "emails": [],
+    "urls": [],
+    "amounts": [
+        "Rs. 2676"
+    ],
+    "ifsc_codes": [],
+    "bank_account_numbers": [],
+    "transaction_ids": [],
+    "summary": "The victim reported an unauthorized credit card transaction of Rs. 2676, provided personal details including name, address, and phone number, and confirmed the card number was cut after the transaction.",
+    "fraud_type": "Credit card fraud",
+    "victim_action": "Reported unauthorized transaction, provided personal information, confirmed card number was cut",
+    "suspect_action": "Unauthorized credit card transaction",
+    "money_lost": "Rs. 2676",
+    "bank_name": "Not Mentioned",
+    "final_outcome": "Complaint filed, SMS promised for confirmation"
+}
